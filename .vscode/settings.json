@@ -1,0 +1,7 @@
+{
+<<<<<<< HEAD
+    "python.jediEnabled": false
+=======
+    "python.pythonPath": "/usr/bin/python3"
+>>>>>>> defb1f8e30f6a9d33ec5261db8a78d1f7f627447
+}

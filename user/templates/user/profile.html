@@ -1,0 +1,13 @@
+{% extends 'blog/base.html'%}
+
+{%block content%}
+Hey : {{ user.username }} your email is :
+{{ user.email }}
+<br>
+  If you need to change any detail, press :
+  <a href="{% url 'edit_profile' %}"> here</a>
+
+  <br>
+<p>You can also Log out here . <a href="{% url 'logout' %}">LOGOUT </a> </p>
+
+{%endblock%}

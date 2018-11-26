@@ -1,0 +1,21 @@
+{% extends 'blog/base.html'%}
+
+{% block title%}
+LOGIN
+{% endblock%}
+
+{% block content %}
+<br>
+<div class="container">
+  <div class="jumbotron">
+    <form action="{% url 'login'%}" method="POST">
+      {% csrf_token %}
+      Username:<br>
+      <input type="text" name="username"><br>
+      Password:<br>
+      <input type="password" name="password"><br>
+      <input type="submit" value="LOGIN">
+    </form>
+  </div>
+</div>
+{% endblock %}
