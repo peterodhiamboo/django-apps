@@ -1,19 +1,4 @@
-.list-group {
-     
-  margin:auto;
-  float:right;
-  padding-top:20px;
- }
- .lead {
-  
-  margin:auto;
-  left:0;
-  right:0;
-  padding-top:20%;
- }
-
-
- body {
+body {
   background-color: #eeeeee;
 }
 
@@ -40,3 +25,7 @@
   content: none;
   display: none;
 }
+
+
+
+

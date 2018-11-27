@@ -2,7 +2,8 @@ from django.shortcuts import(
     render,
     redirect,
     HttpResponse,
-    HttpResponseRedirect
+    HttpResponseRedirect,
+    get_object_or_404
 )
 from django.contrib import auth
 from django.contrib.auth import authenticate, login
@@ -11,6 +12,7 @@ from . models import Post
 from django.contrib.auth import logout
 from django.contrib import messages
 import datetime
+from user.forms import PostChangeForm
 # Create your views here.
 
 
@@ -66,3 +68,11 @@ def createPost(request):
         post.save()
         messages.success(request, '%s your post has been created !' % request.user.username)
     return redirect('homepage')
+
+
+def edit_post(request, post_id):
+    post = Post.objects.get(pk=post_id)
+
+    form = PostChangeForm(instance=post)
+    return render(request, 'blog/edit_post.html', {'form': form})
+
