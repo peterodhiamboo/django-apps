@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'awakening/css/update.css' %}">
+
+<form role="form" id="form-contact" action="{% url 'edit_post' post.pk %}" class="form-contact" method="POST">
+  {% csrf_token %}
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" value="{{ post.title }}"
+          placeholder="Title">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Content here">{{ post.content }}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="submit" class="btn main-btn pull-right">Update</button>
+    </div>
+  </div>
+</form>

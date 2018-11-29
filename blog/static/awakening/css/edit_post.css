@@ -1,0 +1,42 @@
+.contact-form {
+  margin: 50px auto;
+  align-self: center;
+}
+
+.contact-form .textarea {
+  min-height: 50px;
+  resize: none;
+}
+
+
+.form-control {
+  box-shadow: none;
+  border-color: #eee;
+  height: 150px;
+  width: 400px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #007bff;
+}
+
+.form-control-feedback {
+  line-height: 50px;
+}
+
+.main-btn {
+  background: #007bff;
+  border-color: #00b09c;
+  color: #fff;
+}
+
+.main-btn:hover {
+  background: #868e96;
+  color: #007bff;
+}
+
+.form-control-feedback {
+  line-height: 50px;
+  top: 0px;
+}
